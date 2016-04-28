@@ -1,7 +1,5 @@
 package com.etna.tiitytheboss.tic_mobi;
 
-import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -44,11 +42,9 @@ public class MainActivity extends AppCompatActivity {
                                     int position, long id) {
                 String mangaSite = (String) getSitesListView()
                         .getItemAtPosition(position);
+                // String comp = "mangastream.com";
 
-                System.out.println(mangaSite);
-
-                if (mangaSite == "mangastream.com"){
-                    int itemPosition = position;
+                if (mangaSite.equals("mangastream.com")){
 
                     // On affiche ce texte avec un Toast
                     Toast.makeText(
