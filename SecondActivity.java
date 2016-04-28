@@ -38,10 +38,11 @@ public class SecondActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
-                String genreValue = (String) getGenreListView()
+
+                    String genreValue = (String) getGenreListView()
                         .getItemAtPosition(position);
 
-                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                Intent intent = new Intent(getApplicationContext(), ThirdActivity.class);
                 intent.putExtra("mangaSite", getIntent().getStringExtra("mangaSite"));
                 intent.putExtra("genreValue", genreValue);
                 startActivity(intent);

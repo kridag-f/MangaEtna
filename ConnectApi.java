@@ -31,19 +31,21 @@ public class ConnectApi extends AsyncTask<String, Void, String> {
 
         getItemChoice.add(0, "siteId");
         getItemChoice.add(1, "genreId");
-        getItemChoice.add(2, "mangaId");
-        getItemChoice.add(3, "chapters");
+        getItemChoice.add(2, "name");
+        getItemChoice.add(3, "chapterId");
+
+        System.out.println(getCompleteChoice());
 
         tableChoice.add(0, "https://doodle-manga-scraper.p.mashape.com/");
         tableChoice.add(1, "https://doodle-manga-scraper.p.mashape.com/" + getChoiceSite() + "/search/genres");
-        tableChoice.add(2, "https://doodle-manga-scraper.p.mashape.com/" + getChoiceSite() + "/search/genres/" + completeChoice);
-        tableChoice.add(3, "https://doodle-manga-scraper.p.mashape.com/" + getChoiceSite() + "/manga/" + completeChoice);
+        tableChoice.add(2, "https://doodle-manga-scraper.p.mashape.com/" + getChoiceSite() + "/search/genres/" + getCompleteChoice());
+        tableChoice.add(3, "https://doodle-manga-scraper.p.mashape.com/" + getChoiceSite() + "/manga/" + getCompleteChoice());
 
         try {
             OkHttpClient http_client = new OkHttpClient();
 
             Request request = new Request.Builder()
-                    .url((String) tableChoice.get(getChoiceRequest()))
+                    .url((String) getTableChoice().get(getChoiceRequest()))
                     .header("X-Mashape-Key", "mrjGSMrLCBmshHW41x8Q6lX8zbDrp1TNp5MjsnR4DiMov6ykzU")
                     .header("Accept", "text/plain")
                     .build();
