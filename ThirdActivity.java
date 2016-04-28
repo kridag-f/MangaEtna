@@ -42,10 +42,11 @@ public class ThirdActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view,
                                     int position, long id) {
+
                 String mangaValue = (String) getMangaListView()
                         .getItemAtPosition(position);
 
-                Intent intent = new Intent(getApplicationContext(), SecondActivity.class);
+                Intent intent = new Intent(getApplicationContext(), FourthActivity.class);
                 intent.putExtra("mangaSite", getMangaSite());
                 intent.putExtra("genreValue", getGenreValue());
                 intent.putExtra("mangaValue", mangaValue);
