@@ -31,7 +31,7 @@ public class ConnectApi extends AsyncTask<String, Void, String> {
 
         getItemChoice.add(0, "siteId");
         getItemChoice.add(1, "genreId");
-        getItemChoice.add(2, "name");
+        getItemChoice.add(2, "mangaId");
         getItemChoice.add(3, "chapterId");
 
         System.out.println(getCompleteChoice());

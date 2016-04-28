@@ -47,7 +47,7 @@ public class JsonProcess {
                 chapterJsonData = new JSONObject(fin);
                 String[] tmp = new String[chapterJsonData.getJSONArray("chapters").length()];
 
-                System.out.print(chapterJsonData.getJSONArray("chapters").getJSONObject(0));
+                System.out.println(chapterJsonData.getJSONArray("chapters").getJSONObject(0));
 
                 for(Integer j = 0; j < chapterJsonData.getJSONArray("chapters").length(); j++) {
                     tmp[j] = chapterJsonData.getJSONArray("chapters").getJSONObject(j).getString((String) getApi.getGetItemChoice().get(itemChoice));
